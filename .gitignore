@@ -1,7 +1,7 @@
 # Generated files
 
 _cache
-_site
+_site/*
 .jekyll-cache
 
 # Don't exclude our pre-generated icons
