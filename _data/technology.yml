@@ -1,6 +1,5 @@
+rust: "https://www.rust-lang.org"
+python: "https://www.python.org/"
+cmake: "https://cmake.org/"
+discord.py: "https://discordpy.readthedocs.io/en/stable/"
 
-technologies:
-  rust: "https://www.rust-lang.org"
-  python: "https://www.python.org/"
-  cmake: "https://cmake.org/"
-  discord.py: "https://discordpy.readthedocs.io/en/stable/"

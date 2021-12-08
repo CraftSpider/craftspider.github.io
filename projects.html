@@ -2,13 +2,20 @@
 layout: projects
 ---
 
-{% for project in site.data.projects.projects %}
+{% for project in site.data.projects %}
   <div class="row">
     <div class="col-md-4">
       <h2>
         {{project.name}}
       </h2>
-      {{project.technologies}}
+      {% for tech in project.technology %}
+        {% assign tech_lower = tech | downcase %}
+        {% if site.data.technology[tech_lower] %}
+        <a href="{{ site.data.technology[tech_lower] }}">{{ tech }}</a>{% if forloop.last == false %}, {% endif %}
+        {% else %}
+        {{ tech }}{% if forloop.last == false %}, {% endif %}
+        {% endif %}
+      {% endfor %}
     </div>
 
     <div class="col-md-8" style="margin-top:2em; margin-bottom:1em">
