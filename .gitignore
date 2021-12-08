@@ -1,4 +1,21 @@
+# Generated files
+
 _cache
 _site
-.idea/
 .jekyll-cache
+
+# Don't exclude our pre-generated icons
+
+!_site/android-*.png
+!_site/apple-*.png
+!_site/favicon-*.png
+!_site/mstile-*.png
+!_site/safari-*.svg
+
+!_site/favicon.ico
+!_site/browserconfig.xml
+!_site/site.webmanifest
+
+# Project files
+
+.idea/

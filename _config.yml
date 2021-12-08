@@ -7,6 +7,8 @@ description: Software Engineering for fun
 url: http://craftspider.github.io
 #url: http://localhost:4000
 
+plugins: ["jekyll-paginate"]
+
 # For a project page here should be a project name. Otherwise (for user's/organization's page leave it empty)
 baseurl: ''
 
@@ -18,19 +20,20 @@ share:
   twitter: true
   gplus: false
   linkedin: true
-  pinterest: true
+  pinterest: false
   email: true
 
 social:
   github: craftspider
-  stackoverflow: ''
+  stackoverflow:
+  twitter: RuneTynan
   linkedin:
-  instagram: ''
-  lastfm: ''
+  instagram:
+  lastfm:
   rss: feed.xml
 
 # Google Analytics key, leave blank to ignore
-google_analytics_key:
+google_analytics_key: UA-214729556-1
 # Yandex metrica (https://metrica.yandex.com/) leave blank to ignore or put true to use
 yandex_metrica:
 
@@ -44,7 +47,7 @@ comments: false
 permalink: /:year/:month/:title/
 
 # Enable for using pages, more details are here: http://jekyllrb.com/docs/pagination/
-paginate: 10
+paginate: 5
 
 #highlighter: rouge
 
@@ -53,4 +56,19 @@ kramdown:
   input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
   hard_wrap: true
 
-exclude: ['README.md', 'LICENSE']
+exclude: ['README.md', 'LICENSE', 'jekyll-clean-dark.gemspec']
+keep_files:
+  - android-chrome-192x192.png
+  - android-chrome-512x512.png
+  - apple-touch-icon.png
+  - browserconfig.xml
+  - favicon.ico
+  - favicon-16x16.png
+  - favicon-32x32.png
+  - mstile-70x70.png
+  - mstile-144x144.png
+  - mstile-150x150.png
+  - mstile-310x150.png
+  - mstile-310x310.png
+  - safari-pinned-tab.svg
+  - site.webmanifest
