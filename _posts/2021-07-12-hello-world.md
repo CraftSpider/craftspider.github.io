@@ -3,7 +3,7 @@ layout: post
 title: "There's always a first"
 date: 2021-07-12 21:10:00 EST
 tags: meta
-description: A single post stands in the dessert, looking out over a desolate wasteland
+description: A single post stands in the desert, looking out over a desolate wasteland
 ---
 
 I refused to title this post 'Hello World!', despite the temptation. It seems every blog starts with that one, and while that's not a bad thing, it felt a little too on the nose. However, I can't promise I won't go with something equally cliche in the future.
