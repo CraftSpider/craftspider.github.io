@@ -1,0 +1,41 @@
+
+projects:
+
+  - name: Rustdoc JSON Backend
+    description: >
+      I helped work on the Rustdoc JSON output backend, allowing generation of JSON files
+      containing all that's needed to write your own documentation backend.
+    technology: ["Rust"]
+    links:
+      github: https://github.com/rust-lang/rust/tree/master/src/doc/rustdoc
+
+  - name: Rebound
+    description: A full reflection library for Rust, with lifetime safety and full dynamicism
+    technology: ["Rust"]
+    links:
+      github: https://github.com/CraftSpider/rebound
+
+  - name: Department
+    description: An implementation of a 'storage' API for Rust, an abstraction over the concept of allocation
+    technology: ["Rust"]
+    links:
+      github: https://github.com/CraftSpider/department
+
+  - name: RBXM-rs
+    description: A tool for reading and writing [Roblox](https://roblox.com) model files
+    technology: ["Rust"]
+    links:
+      github: https://github.com/CraftSpider/rbxm-rs
+
+  - name: GCD
+    description: A (mostly abandoned) project to create a tool for reverse-engineering gamecube files
+    technology: ["C++", "CMake"]
+    links:
+      github: https://github.com/CraftSpider/GCDecompiler
+
+  - name: Talos
+    description: A discord bot designed for writing groups. My first 'major' project
+    technology: ["Python", "discord.py"]
+    links:
+      github: https://github.com/CraftSpider/TalosBot
+      site: https://talosbot.org
