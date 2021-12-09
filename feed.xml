@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Craft's Cursed Code</title>
+		<description>Software Engineering for fun</description>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>There's always a first</title>
+				<description>&lt;p&gt;I refused to title this post ‘Hello World!’, despite the temptation. It seems every blog starts with that one, and while that’s not a bad thing, it felt a little too on the nose. However, I can’t promise I won’t go with something equally cliche in the future.&lt;/p&gt;
+
+&lt;p&gt;This new blog exists to capture my occasional urge to write about my exploits while working on various projects, or anything else that I feel strongly enough to write up a whole post about. Maybe someday I can reach the writing acumen of &lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt; and their beautiful prose, though I somehow doubt it.&lt;/p&gt;
+
+&lt;p&gt;If you want to know more about me, take a look at the &lt;a href=&quot;/about&quot;&gt;About Me&lt;/a&gt; page. If you want to take a look at some of the things I’ve worked on, take a look at &lt;a href=&quot;/projects&quot;&gt;Projects&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 08 Dec 2021 02:10:00 +0000</pubDate>
+				<link>/2021/12/hello-world/</link>
+				<guid isPermaLink="true">/2021/12/hello-world/</guid>
+			</item>
+		
+	</channel>
+</rss>
