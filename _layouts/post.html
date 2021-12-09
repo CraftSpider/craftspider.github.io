@@ -8,10 +8,7 @@
                 <div class="card">
                   <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
                   <div class="post-meta">
-                    <div class="post-time">
-                      <i class="fa fa-calendar-alt" title="{{ page.date | date: '%x %X' }}"></i>
-                      <time datetime='{{ page.date | date: "%Y-%m-%d" }}'>{{ page.date | date_to_string }}</time>
-                    </div>
+                    {% include post-time.html date=page.date %}
                     <ul>
                       {% for tag in page.tags %}
                         <li><a href="{{ '/tag/' | append: tag | relative_url }}">{{ tag }}</a></li>

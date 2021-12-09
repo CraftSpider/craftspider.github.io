@@ -10,10 +10,7 @@ layout: page
 </h2>
 
 <div class="post-meta">
-    <div class="post-time">
-        <i class="fa fa-calendar-alt" title="{{ post.date | date: '%x %X' }}"></i>
-        <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time>
-    </div>
+    {% include post-time.html date=post.date %}
     <ul>
         {% for tag in post.tags %}
         <li><a href="{{'/tag/' | append: tag | relative_url }}">{{ tag }}</a></li>

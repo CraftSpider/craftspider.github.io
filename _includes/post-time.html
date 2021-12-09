@@ -1,0 +1,4 @@
+<div class="post-time">
+    <i class="fa fa-calendar-alt" title="{{ include.date | date: '%x %X' }}"></i>
+    <time datetime='{{ include.date | date: "%Y-%m-%d" }}'>{{ include.date | date: "%Y-%m-%d" | timeago }}</time>
+</div>

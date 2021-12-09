@@ -1,12 +1,14 @@
 
+require 'set'
+
 module Tags
     class Generator < Jekyll::Generator
         safe true
 
         def generate(site)
-            tags = []
+            tags = Set[]
             for post in site.posts.docs do
-                tags.push(*post.data["tags"])
+                tags.merge(post.data["tags"])
             end
 
             for tag in tags do

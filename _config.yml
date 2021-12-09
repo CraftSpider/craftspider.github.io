@@ -51,6 +51,7 @@ pagination:
   enabled: true
   per_page: 5
   permalink: /page:num/
+  sort_reverse: true
 
 #highlighter: rouge
 
