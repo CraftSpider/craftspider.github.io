@@ -12,4 +12,4 @@ He and I spent a while going back and forth about some possible semantics for th
 
 The current implementation of the language is interpreted but typed to an unspecified degree - which personally, I feel is fitting for a language meant to be intentionally annoying to use.
 
-If you're interested in checking out Goose, take a look at [https://github.com/CraftSpider/goose]. Feel free to open issues on the repository if you have any comments or suggestions.
+If you're interested in checking out Goose, take a look at it [on GitHub](https://github.com/CraftSpider/goose). Feel free to open issues on the repository if you have any comments or suggestions.
