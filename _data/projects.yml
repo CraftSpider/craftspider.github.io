@@ -6,23 +6,29 @@
   links:
     github: https://github.com/rust-lang/rust/tree/master/src/doc/rustdoc
 
-- name: Rebound
-  description: A full reflection library for Rust, with lifetime safety and full dynamicism
-  technology: ["Rust"]
-  links:
-    github: https://github.com/CraftSpider/rebound
-
 - name: Department
   description: An implementation of a 'storage' API for Rust, an abstraction over the concept of allocation
   technology: ["Rust"]
   links:
     github: https://github.com/CraftSpider/department
 
+- name: jsonpath plus
+  description: An implementation of the proposed jsonpath specification, with some extensions
+  technology: ["Rust"]
+  links:
+    github: https://github.com/CraftSpider/jsonpath-plus
+
 - name: RBXM-rs
   description: A tool for reading and writing [Roblox](https://roblox.com) model files
   technology: ["Rust"]
   links:
     github: https://github.com/CraftSpider/rbxm-rs
+
+- name: Rebound
+  description: A full reflection library for Rust, with lifetime safety and full dynamicism
+  technology: ["Rust"]
+  links:
+    github: https://github.com/CraftSpider/rebound
 
 - name: GCD
   description: A (mostly abandoned) project to create a tool for reverse-engineering gamecube files
@@ -36,4 +42,3 @@
   links:
     github: https://github.com/CraftSpider/TalosBot
     site: https://talosbot.org
-
