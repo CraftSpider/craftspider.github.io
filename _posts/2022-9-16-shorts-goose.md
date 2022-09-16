@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shorts: The Goose Language"
-date: 2022-9-16 11:00:00 EST
+date: 2022-9-16 9:00:00 EST
 tags: rust shorts
 description: A language that is intentionally obtuse
 ---
