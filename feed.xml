@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Craft's Cursed Code</title>
+		<description>Software Engineering for fun</description>
+		<link></link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Shorts: The Goose Language</title>
+				<description>&lt;p&gt;I have a passing interest in esoteric languages, and one day I was talking with my partner we had an interesting idea: What if there was a programming language without return statements? You still had functions, but instead of them returning at the end or when you invoked &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt;, you defined them alongside a condition expression. When this expression evaluates to true, the function exits.&lt;/p&gt;
+
+&lt;p&gt;He and I spent a while going back and forth about some possible semantics for this language. In general, we tried to follow a pattern of making the language usable, while simultaneously making it intentionally somewhat obtuse to write. We settled on removing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;if&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;while&lt;/code&gt; loops, as those could be easily emulated by functions.&lt;/p&gt;
+
+&lt;p&gt;The current implementation of the language is interpreted but typed to an unspecified degree - which personally, I feel is fitting for a language meant to be intentionally annoying to use.&lt;/p&gt;
+
+&lt;p&gt;If you’re interested in checking out Goose, take a look at it &lt;a href=&quot;https://github.com/CraftSpider/goose&quot;&gt;on GitHub&lt;/a&gt;. Feel free to open issues on the repository if you have any comments or suggestions.&lt;/p&gt;
+</description>
+				<pubDate>Fri, 16 Sep 2022 14:00:00 +0000</pubDate>
+				<link>/2022/09/shorts-goose/</link>
+				<guid isPermaLink="true">/2022/09/shorts-goose/</guid>
+			</item>
+		
+			<item>
+				<title>There's always a first</title>
+				<description>&lt;p&gt;I refused to title this post ‘Hello World!’, despite the temptation. It seems every blog starts with that one, and while that’s not a bad thing, it felt a little too on the nose. However, I can’t promise I won’t go with something equally cliche in the future.&lt;/p&gt;
+
+&lt;p&gt;This new blog exists to capture my occasional urge to write about my exploits while working on various projects, or anything else that I feel strongly enough to write up a whole post about. Maybe someday I can reach the writing acumen of &lt;a href=&quot;https://aphyr.com/&quot;&gt;Aphyr&lt;/a&gt; and their beautiful prose, though I somehow doubt it.&lt;/p&gt;
+
+&lt;p&gt;If you want to know more about me, take a look at the &lt;a href=&quot;/about&quot;&gt;About Me&lt;/a&gt; page. If you want to take a look at some of the things I’ve worked on, take a look at &lt;a href=&quot;/projects&quot;&gt;Projects&lt;/a&gt;&lt;/p&gt;
+</description>
+				<pubDate>Wed, 08 Dec 2021 02:10:00 +0000</pubDate>
+				<link>/2021/12/hello-world/</link>
+				<guid isPermaLink="true">/2021/12/hello-world/</guid>
+			</item>
+		
+	</channel>
+</rss>
