@@ -12,6 +12,7 @@
     <script src="{{ '/assets/js/jquery.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/popper.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/bootstrap4.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/timeago.min.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/header.js' | relative_url }}"></script>
     <script src="{{ '/assets/css/svg-with-js/js/fontawesome-all.js' | relative_url }}"></script>
     <link href="{{ '/assets/css/bootstrap4.min.css' | relative_url }}" rel="stylesheet">
@@ -28,12 +29,17 @@
     <meta name="theme-color" content="#000000">
  </head>
 
-<body>
+<body onload="start_timeago()">
 
 {% include google-analytics.html %}
 {% include yandex-metrica.html %}
 
 <script type="text/javascript">
+    function start_timeago() {
+        const nodes = document.querySelectorAll('.timeago');
+        timeago.render(nodes, 'en_US');
+    }
+
     WebFontConfig = {
         google: {
             families: ['Ubuntu::latin']
