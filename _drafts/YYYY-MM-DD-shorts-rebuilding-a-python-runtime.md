@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shorts: Rebuilding a Python runtime"
-date: 2021-12-08 19:07:00 EST
+date: YYYY-MM-DD HH:MM:SS PST
 tags: python shorts
 description: How to `del` your whole python runtime, then get it back
 ---
