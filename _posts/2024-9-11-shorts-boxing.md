@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Shorts: NaN Boxing and Rust"
-date: 2024-09-1 09:24:00 PST
+date: 2024-09-11 09:24:00 PST
 tags: rust shorts
 description: All about NaN boxes and the `boxing` library
 ---
