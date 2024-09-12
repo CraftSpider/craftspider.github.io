@@ -56,7 +56,7 @@ This 'raw' box is a useful abstraction to start with - it lets us implement all 
 
 There are an infinite number of possible implementations you may want to build on top of this base. After all, different projects may want to store different types of data. `boxing` tries to provide implementations for a couple common cases, but if you need something tailored to your needs, you can build it yourself on top of `RawBox`, and let `boxing` handle the bit-level work.
 
-### The `heap::NanBox<'a, T>`
+### The `heap::NanBox<'a, T>` type
 
 The primary high-level implementation built in. This type actually assigns the different tag values meanings, and lets you store both borrowed and owned data on the heap if it doesn't fit inline. Since `RawBox` handles all the bit-level work, this type is actually pretty simple. It's basically just a mapping of tags to types, and some implementation work to handle converting the supported types into raw bytes and getting them back out. The lifetime lets you even use it to store references instead of owned data, so it should work easily with an arena or other source of long-lived references.
 

@@ -17,13 +17,15 @@
 //********************************************************
 
 // Several accent colors, choose one or create your own!
-$accent-color: #7d639a;  // Purple
+$accent-color: #7c59a4;  // Purple
 //$accent-color: #3CA2A2;  // original =)
 //$accent-color: #C38FD6;  // velvet
 //$accent-color: #8FD6B3;  // greenish
 //$accent-color: #35B4DE;  // bluish
 //$accent-color: #D2E354;  // yellowish
 //$accent-color: #52B54B;  // green
+
+$link-color: #c1a4e4; // Light purple
 
 $font-color: #dddddd;
 $background-color: #000000;
@@ -79,7 +81,7 @@ blockquote {
 }
 
 a {
-  color: $accent-color;
+  color: $link-color;
 }
 
 //********************************************************

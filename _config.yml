@@ -13,7 +13,7 @@ plugins: ["jekyll-paginate-v2"]
 baseurl: ''
 
 author: CraftSpider
-copyright: 2021
+copyright: 2024
 
 share:
   facebook: false
