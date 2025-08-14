@@ -6,7 +6,9 @@ tags: rust storages
 description: What is a `Storage`?
 ---
 
-Welcome to part 2 of my series on the `Storage` API. In the last post, we went over why `Allocator` isn't serving its purpose. In this post, we'll cover the basics of the proposed replacement.
+Welcome to part 2 of my series on the `Storage` API. If you missed the first post, it can be found [here](TODO).
+
+In the last post, we went over why `Allocator` isn't serving its purpose. In this post, we'll cover the basics of the proposed replacement.
 
 ## The Base
 
