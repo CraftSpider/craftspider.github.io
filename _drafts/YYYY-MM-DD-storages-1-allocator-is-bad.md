@@ -31,12 +31,3 @@ If all that seemed pretty technical, that's because it is. `Allocator` needs a c
 So, `Allocator` is leaky and complicated. It abstracts 'being malloc', not some deeper concept. What would we prefer it to be an abstraction of? And what rules do we want this hypothetical trait to follow? Lets start with what the name implies - allocation. Allocation, at a deeper level, is about getting 'a chunk of memory' that can be used to store data in. This seems like a good place to start. Lets try to build an abstraction that is based on 'providing memory to use' as its conceptual goal. On top of that, we'll want to keep track of a couple properties some implementations will require. *Some* users will want to be able to know that memory they get is 'Pinned'. Such memory has a single consistent address until deallocated. Some users will want memory to be 'Leakable'. This means the memory can outlive the type that provided it, and maybe later deallocated by a different instance of the same type. Some users will want to store multiple elements at once - users like `Box` or `Rc` only ever care about one chunk of memory, but `Vec` will want to grow and shrink that memory over time, and a user like `HashMap` may want many different chunks, not caring if they're contiguous. And finally, some users (`Rc`, `Arc`) will want to be able to mutate the memory using only a shared reference to the allocator, while others will only ever mutate it while maintaining unique ownership (`Box`, `Vec`).
 
 With all this, we've established why `Allocator` is a bad abstraction, and what the abstraction we actually want should look like. In the next post, we'll finally discuss `Storage`, the proposal for how to write that abstraction.
-
-## Points to cover
-
-- Allocator is a thin wrapper over 'malloc'-like behavior
-- Allocator is overly restrictive for most use-cases
-  - We make everyone pay for supporting the few
-- It requires a more complicated mental model
-- What are the properties we care about? 
-- What if we split up Allocator into those components (Post 2)
