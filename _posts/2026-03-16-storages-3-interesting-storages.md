@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Storages 3: Interesting Storages"
-date: YYYY-MM-DD HH:MM:SS PST
+date: 2026-03-16 12:00:00 PST
 tags: rust storages
 description: Examples of useful storage implementations.
 ---

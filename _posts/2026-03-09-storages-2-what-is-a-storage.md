@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Storages 2: What is a Storage?"
-date: YYYY-MM-DD HH:MM:SS PST
+date: 2026-03-09 12:00:00 PST
 tags: rust storages
 description: What is a `Storage`?
 ---

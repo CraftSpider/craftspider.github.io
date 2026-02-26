@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Storages 1: `Allocator` is a bad abstraction"
-date: YYYY-MM-DD HH:MM:SS PST
+date: 2026-03-02 12:00:00 PST
 tags: rust storages
 description: Why should we replace `Allocator` in the first place?
 ---
