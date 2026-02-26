@@ -12,13 +12,13 @@ In the last post, we went over why `Allocator` isn't serving its purpose. In thi
 
 ## The Base
 
-All storages, no matter what else they can do, need to be able to... well, store something. Here's one way we could define `Storage`:
+All storages, no matter what else they can do, need to be able to... well, store something. Here's one way we could define `Storage`[^1]:
 
 ```rs
 type Memory = [MaybeUninit<u8>];
 
 unsafe trait Storage {
-	type Handle;
+	type Handle: Copy + Ord + Hash + Unpin + Send + Sync;
 
 	fn allocate(&mut self, layout: Layout) -> Result<Self::Handle, AllocError>;
 	unsafe fn deallocate(&mut self, handle: Self::Handle, layout: Layout);
@@ -32,11 +32,13 @@ We already see some differences to `Allocator`. Instead of always returning poin
 
 Most places that discuss benefits of `Storage` start by pointing out that this allows things like `Box<dyn Trait>` in alloc-free contexts, since now you can have some `InlineStorage<BYTES, ALIGN>` that has a fixed max size, and any type that fits in that space can be used without actual indirection. This is a very nice property for embedded or certain highly-optimized use-cases, but I didn't start with it because it's only *one advantage* of storage, and one that most people honestly may never use. If you don't care about this use case, it's easy to ask why we should be making a more complex API for this one thing. But really, the point isn't one use-case, it's about providing a better abstraction that fits in with Rust's style and memory-safety guarantees.
 
+There's one more subtlety not revealed by just the method signatures above - by default, `allocate` invalidates previously handed out handles. We'll cover below when that rule can be relaxed, which is obviously necessary to support all `Allocator` behavior.
+
 ## But I really like leaking things
 
 So, now we have our base. It allows the important things - allocating and deallocating memory. But now you *do* want to be able to pin your memory, or share handles between different instance of the same `Storage`. Something like `Rc` needs to be able to do this, since every `Rc` will be holding its own instance of a `Storage`, and we expect to be able to clone it and still resolve the handle to the same memory.
 
-We allow `Storage` implementations to provide these extended guarantees in the same way as `Iterator` does, with subtraits. The `PinningStorage` trait means that, until `dealloc` is called, the memory the storage points to won't move. There's also a `SharedMutabilityStorage` that allows resolving `&self -> &mut Memory` unsafely, implying memory mutation is legal behind shared references, and that different handles can be resolved mutably at the same time.
+We allow `Storage` implementations to provide these extended guarantees in the same way as `Iterator` does, with subtraits. The `PinningStorage` trait means that, until `dealloc` is called, the memory the storage points to won't move. There's also a `SharedMutabilityStorage` that allows resolving `&self -> &mut Memory` unsafely, implying memory mutation is legal behind shared references, and that different handles can be resolved mutably at the same time. And a `MultipleStorage` relaxes the handle invalidation clause on `allocate`, allowing multiple allocation to be managed by one instance.
 
 ```rs
 unsafe trait PinningStorage: Storage {}
@@ -45,6 +47,12 @@ unsafe trait PinningStorage: Storage {}
 ```rs
 unsafe trait SharedMutabilityStorage: Storage {
 	unsafe fn resolve_shared(&self, handle: Self::Handle, layout: Layout) -> &mut Memory;
+}
+```
+
+```rs
+unsafe trait MultipleStorage: Storage {
+	unsafe fn resolve_many_mut<const N: usize>(&mut self, handles: [(Self::Handle, Layout); N]) -> [&mut Memory; N];
 }
 ```
 
@@ -61,3 +69,5 @@ trait Allocator = Storage + PinningStorage + SharedMutabilityStorage + ...;
 Then, users who still want 'just give me `malloc`' can simply bound on `Allocator`, and don't even need to think about the details of the implementation. This may slightly encourage requiring more guarantees than you need, but it also provides both a nice simple entry point, while making it much easier to look at the documentation and immediately see that you're just requesting 'a storage, but with a bunch of requirements'. I personally think it's a fine inclusion, since one reasonable complaint about storages is that they have a pretty broad API surface for when you just want to get started with custom allocators.
 
 Hopefully you now have at least a basic understanding of the `Storage` API. In the next post, we'll be looking at some concrete implementations of interesting storages, and data-types that use them.
+
+[^1]: Example code borrowed from https://github.com/CAD97/storages-api/
