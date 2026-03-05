@@ -6,7 +6,7 @@ tags: rust storages
 description: Why should we replace `Allocator` in the first place?
 ---
 
-Welcome to my new series on the `Storage` proposal, a replacement for the currently-unstable `Allocator` trait. We'll be going over why `Allocator` isn't a good abstraction, how we can do better, and look into a shiny future. So, lets dive in with part 1, where I'll hopefully convince you that the current `Allocator` trait isn't a very good abstraction.
+Welcome to my new series on the `Storage` proposal, a replacement for the currently-unstable `Allocator` trait. We'll be going over why `Allocator` isn't a good abstraction, how we can do better, and look into a shiny future. So, let's dive in with part 1, where I'll hopefully convince you that the current `Allocator` trait isn't a very good abstraction.
 
 ## Why does this matter?
 
