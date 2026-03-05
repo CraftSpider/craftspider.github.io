@@ -32,4 +32,4 @@ So, `Allocator` is leaky and complicated. It abstracts 'being malloc', not some 
 
 With all this, we've established why `Allocator` is a bad abstraction, and what the abstraction we actually want should look like. In the next post, we'll finally discuss `Storage`, the proposal for how to write that abstraction.
 
-[^1]: https://github.com/rust-lang/rust/pull/118890
+[^1]: [rust-lang/rust#118890](https://github.com/rust-lang/rust/pull/118890)
